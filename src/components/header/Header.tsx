@@ -5,14 +5,14 @@ import BottomHeader from "./BottomHeader";
 
 const Header = () => {
   return (
-    <div>
+    <header >
       {/* Top header  */}
       <TopHeader />
       {/* Middle header  */}
       <MiddleHeader />
       {/* bottom header  */}
       <BottomHeader />
-    </div>
+    </header>
   );
 };
 
