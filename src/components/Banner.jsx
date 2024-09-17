@@ -5,7 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 
 const Banner = () => {
   return (
-    <div className="bg-[#115061] py-20 text-themeWhite">
+    <div className="bg-[#115061] py-20 text-themeWhite mb-20">
       <Container className="flex flex-col lg:flex-row justify-between items-center gap-6">
         {/* text  */}
         <div className="flex flex-col gap-5">

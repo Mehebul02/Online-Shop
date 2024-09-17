@@ -12,14 +12,15 @@ import Title from "@/components/Title";
 
 const Footer = () => {
   return (
-    <div className="bg-lightBg py-10 lg:py-20">
-      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div className="bg-lightBg py-10 lg:py-20 my-32">
+      {/* <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"> */}
+      <Container className="flex justify-between">
         <div className="flex flex-col items-start gap-y-5">
           <Link href={"/"}>
             <Image src={logo} alt="logo" />
           </Link>
-          <p>
-            We are a team of designers and developers that create high quality
+          <p className="">
+            We are a team of designers and <br/> developers that create high quality
             WordPress
           </p>
           {/* <SocialLink/> */}
