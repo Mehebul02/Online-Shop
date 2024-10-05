@@ -7,6 +7,7 @@ import { RiCloseLine, RiSearchLine } from 'react-icons/ri';
 import { LiaUser } from 'react-icons/lia';
 import { MdFavoriteBorder, MdOutlineFavoriteBorder } from 'react-icons/md';
 import { BiShoppingBag } from 'react-icons/bi';
+import MobileNavigation from './MobileNavigation';
 const MiddleHeader = () => {
     const [searchValue, setSearchValue] = useState("");
     return (
@@ -57,6 +58,8 @@ const MiddleHeader = () => {
                     </div>
 
                 </div>
+                {/* Mobile navigation  */}
+                <MobileNavigation/>
             </Container>
         </div>
     );
