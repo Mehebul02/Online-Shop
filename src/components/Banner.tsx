@@ -1,9 +1,11 @@
 import { banner } from "@/assets";
+import { banners } from "@/constants";
 import Container from "@/shared/Container";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
 
 const Banner = () => {
+ 
   return (
     <div className="bg-[#115061] py-20 text-themeWhite mb-20">
       <Container className="flex flex-col-reverse lg:flex-row justify-between items-center gap-6">
