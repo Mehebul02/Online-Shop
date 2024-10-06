@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { RiMenu3Fill } from 'react-icons/ri';
 import SocialLinks from '../SocialLinks';
+import { logo } from '@/assets';
+import Image from 'next/image';
 
 const MobileNavigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,10 +35,10 @@ const MobileNavigation = () => {
                         className="w-full max-w-md rounded-xl bg-black border border-indigo-300 p-4 backdrop-blur-2xl transition duration-300 ease-out"
                     >
                         <div className="flex justify-between items-center">
-                            <h1 className="text-white">Navigation Menu</h1>
+                        <Image src={logo} alt="logo" className='w-20'/>
                             <Button 
                                 onClick={() => setIsOpen(false)} 
-                                className="text-white/40 text-2xl hover:text-red-600 transition duration-300 border border-white/20 rounded-sm hover:border-white/40"
+                                className="text-white/40 text-2xl hover:bg-red-600 transition duration-300 border border-white/20 rounded-sm hover:border-white/40"
                             >
                                 <MdClose />
                             </Button>

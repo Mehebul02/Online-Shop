@@ -8,7 +8,7 @@ const SocialLinks = () => {
         {icon:<FaLinkedin/>, href:'https://www.facebook.com/alif.islam.212'}
     ]
     return (
-        <div className="flex items-center gap-5 pt-5">
+        <div className="text-xl text-white/50 flex items-center gap-5 pt-5">
             {linksData?.map((item,index)=>(
                 <Link key={index} href={item.href} target="_blank">{item.icon}  </Link>
             ))}
