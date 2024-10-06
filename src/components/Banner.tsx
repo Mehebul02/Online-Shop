@@ -1,4 +1,4 @@
-import { banner } from "@/assets";
+import { banner, tabletPhone } from "@/assets";
 import { banners } from "@/constants";
 import Container from "@/shared/Container";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import { GoArrowRight } from "react-icons/go";
 const Banner = () => {
  
   return (
-    <div className="bg-[#115061] py-20 text-themeWhite mb-20">
+    <div className="bg-[#11405A] py-20 text-themeWhite mb-20">
       <Container className="flex flex-col-reverse lg:flex-row justify-between items-center gap-6">
         {/* text  */}
         <div className="flex flex-col gap-5 text-center lg:text-start">
@@ -23,7 +23,7 @@ const Banner = () => {
         </div>
         {/* image  */}
         <div>
-          <Image src={banner} alt="banner" className="w-52 lg:w-96"/>
+          <Image src={tabletPhone} alt="banner" className="w-52 lg:w-96"/>
         </div>
       </Container>
     </div>
