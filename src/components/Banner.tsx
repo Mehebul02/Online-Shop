@@ -12,7 +12,7 @@ const Banner = () => {
         {/* text  */}
         <div className="flex flex-col gap-5 text-center lg:text-start">
           <p className="text-md">Starting at $999.90</p>
-          <h1 className="text-xl lg:text-5xl font-bold max-w-[500px]">The best tablet Collection 2024</h1>
+          <h1 className="text-xl lg:text-5xl font-bold max-w-[500px] leading-[60px]">The best tablet Collection 2024</h1>
           <h1>
             Exclusive offer <span className="text-orange-500">-30%</span> off
             this week
