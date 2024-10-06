@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { RiMenu3Fill } from 'react-icons/ri';
+import SocialLinks from '../SocialLinks';
 
 const MobileNavigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -54,6 +55,8 @@ const MobileNavigation = () => {
                                 </Link>
                             ))}
                         </div>
+                        {/* social link  */}
+                        <SocialLinks/>
                     </DialogPanel>
                 </div>
             </Dialog>

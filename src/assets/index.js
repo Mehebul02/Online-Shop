@@ -1,4 +1,4 @@
-import logo from "../assets/logo.webp";
+import logo from "../assets/e-commerce-logo.webp";
 import banner from '../assets/bannerImageOne.webp'
 
 

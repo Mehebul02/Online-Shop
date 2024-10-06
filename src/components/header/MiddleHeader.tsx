@@ -13,7 +13,7 @@ const MiddleHeader = () => {
     return (
         <div className='border-b-[1px] border-b-gray-400'>
             <Container className='py-5 flex justify-between items-center gap-4 md:gap-6 lg:gap-20'>
-                <Image src={logo} alt="logo" className="w-28" />
+                <Image src={logo} alt="logo" className="w-20" />
 
                 {/* Search ber  */}
                 <div className='hidden md:inline-flex flex-1 h-10 relative'>

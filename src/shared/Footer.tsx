@@ -17,7 +17,7 @@ const Footer = () => {
       <Container className="flex justify-between">
         <div className="flex flex-col items-start gap-y-5">
           <Link href={"/"}>
-            <Image src={logo} alt="logo" />
+            <Image src={logo} alt="logo" className="w-20" />
           </Link>
           <p className="">
             We are a team of designers and <br/> developers that create high quality
