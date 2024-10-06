@@ -12,9 +12,9 @@ import Title from "@/components/Title";
 
 const Footer = () => {
   return (
-    <div className="bg-lightBg py-10 lg:py-20 my-32 mx-auto">
-      {/* <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"> */}
-      <Container className="flex flex-col lg:flex-row justify-between gap-6">
+    <div className="bg-lightBg py-10 lg:py-20 my-52  ">
+
+<Container className="flex flex-col lg:flex-row justify-between gap-6 " >
         <div className="flex flex-col items-start gap-y-5">
           <Link href={"/"}>
             <Image src={logo} alt="logo" className="w-20" />
@@ -72,12 +72,11 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-   <div className="w-full mx-auto">
-   <h1 className="text-sm text-center mx-auto">Copyright © 2024.</h1>
-   </div>
 
     </div>
-  );
+
+);
+
 };
 
 export default Footer;
