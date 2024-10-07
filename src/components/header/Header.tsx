@@ -5,7 +5,7 @@ import BottomHeader from "./BottomHeader";
 
 const Header = () => {
   return (
-    <header >
+    <header className="sticky top-0 z-50 bg-white">
       {/* Top header  */}
       <TopHeader />
       {/* Middle header  */}

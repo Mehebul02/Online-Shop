@@ -1,8 +1,9 @@
 import { banner, tabletPhone } from "@/assets";
-import { banners } from "@/constants";
+import { bannerText } from "@/constants";
 import Container from "@/shared/Container";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
+import Button from "./Button";
 
 const Banner = () => {
  
@@ -17,9 +18,9 @@ const Banner = () => {
             Exclusive offer <span className="text-orange-500">-30%</span> off
             this week
           </h1>
-          <button className="flex items-center gap-1 bg-themeWhite text-black rounded-md w-32  px-0 justify-center text-sm font-semibold hover:bg-transparent hover:text-themeWhite py-3 border border-transparent hover:border-white/40 duration-200">
+          <Button>
             Shop Now <GoArrowRight className="text-lg" />
-          </button>
+          </Button>
         </div>
         {/* image  */}
         <div>

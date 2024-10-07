@@ -1,6 +1,6 @@
 
 
-export const banners ={
+export const bannerText ={
   _id:1222,
   priceText:'Starting at $999.90',
   title:'The best tablet Collection 2024',
