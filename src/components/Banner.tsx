@@ -18,7 +18,7 @@ const Banner = () => {
             Exclusive offer <span className="text-orange-500">-30%</span> off
             this week
           </h1>
-          <Button className='flex items-center '>
+          <Button href='/product' className='flex items-center '>
             Shop Now <GoArrowRight className="text-lg"/>
           </Button>
         </div>
