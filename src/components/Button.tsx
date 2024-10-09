@@ -1,16 +1,19 @@
 import { twMerge } from "tailwind-merge";
 
-interface Props{
-    children:React.ReactNode;
-    className?:string;
-    href:string;
-    onclick?:any;
+interface Props {
+    children: React.ReactNode;
+    className?: string;
+    href: string;
+    onclick?: any;
 }
-const Button = ({children,className}) => {
+const Button = ({ children, className, href }) => {
     return (
-        <div>
-            <button className={twMerge("flex items-center gap-1 bg-themeWhite text-black rounded-md w-32  px-0 justify-center text-sm font-semibold hover:bg-transparent hover:text-themeWhite py-3 border border-transparent hover:border-white/40 duration-200",className)}>{children}</button>
-        </div>
+        <>
+            {
+                href ? <button className={twMerge("flex items-center gap-1 bg-themeWhite text-black rounded-md w-32  px-0 justify-center text-sm font-semibold hover:bg-transparent hover:text-themeWhite py-3 border border-transparent hover:border-white/40 duration-200", className)}>{children}</button> :<button className={twMerge("flex items-center gap-1 bg-themeWhite text-black rounded-md w-32  px-0 justify-center text-sm font-semibold hover:bg-transparent hover:text-themeWhite py-3 border border-transparent hover:border-white/40 duration-200",className)}>{children}</button>
+        }
+
+        </>
     );
 };
 

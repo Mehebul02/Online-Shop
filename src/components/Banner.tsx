@@ -6,7 +6,7 @@ import { GoArrowRight } from "react-icons/go";
 import Button from "./Button";
 
 const Banner = () => {
- 
+
   return (
     <div className="bg-[#11405A] py-20 text-themeWhite mb-20">
       <Container className="flex flex-col-reverse lg:flex-row justify-between items-center gap-6">
@@ -18,13 +18,13 @@ const Banner = () => {
             Exclusive offer <span className="text-orange-500">-30%</span> off
             this week
           </h1>
-          <Button>
-            Shop Now <GoArrowRight className="text-lg" />
+          <Button className='flex items-center '>
+            Shop Now <GoArrowRight className="text-lg"/>
           </Button>
         </div>
         {/* image  */}
         <div>
-          <Image src={tabletPhone} alt="banner" className="w-52 lg:w-96"/>
+          <Image src={tabletPhone} alt="banner" className="w-52 lg:w-96" />
         </div>
       </Container>
     </div>
