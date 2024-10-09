@@ -1,5 +1,11 @@
 import { twMerge } from "tailwind-merge";
 
+interface Props{
+    children:React.ReactNode;
+    className?:string;
+    href:string;
+    onclick?:any;
+}
 const Button = ({children,className}) => {
     return (
         <div>
