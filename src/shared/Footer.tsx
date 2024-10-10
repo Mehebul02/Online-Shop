@@ -9,12 +9,13 @@ import { GoDotFill } from "react-icons/go";
 import { BsEnvelopeAt } from "react-icons/bs";
 import { GrLocation } from "react-icons/gr";
 import Title from "@/components/Title";
+import SocialLinks from "@/components/SocialLinks";
 
 const Footer = () => {
   return (
     <div className="bg-lightBg py-10 lg:py-20 my-52  ">
 
-<Container className="flex flex-col lg:flex-row justify-between gap-6 " >
+<Container className="flex flex-col lg:flex-row justify-between gap-6 mb-20" >
         <div className="flex flex-col items-start gap-y-5">
           <Link href={"/"}>
             <Image src={logo} alt="logo" className="w-20" />
@@ -23,6 +24,7 @@ const Footer = () => {
             Could you clarify what the short description is <br />  for? For example, is it for your online <br />  profile, portfolio, or a project description? <br />  This will help me tailor the description accordingly!
           </p>
           {/* <SocialLink/> */}
+          <SocialLinks iconStyle="bg-themeWhite text-black border-themeColor  inline-flex p-2 rounded-full hover:text-sky-600 hover:border-sky-300 duration-300 cursor-pointer"/>
         </div>
         <div>
           <Title>My Account</Title>
@@ -63,7 +65,7 @@ const Footer = () => {
             </div>
             <div className="mt-3">
               <p className="text-base flex items-center gap-x-3 text-gray-600">
-                <BsEnvelopeAt /> shofy@suppert.com
+                <BsEnvelopeAt /> OnlineShop@suppert.com
               </p>
               <p className="text-base flex items-center gap-x-3 text-gray-600">
                 <GrLocation /> Dhaka, Bangladesh
