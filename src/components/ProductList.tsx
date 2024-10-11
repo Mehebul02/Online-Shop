@@ -17,12 +17,12 @@ const ProductList = ({products}:Props) => {
            
 
         
-            {/* {
+            {
                 products?.map((item:Product)=>(
                     <ProductCard key={item?.id} product={item}/>
                 ))
-            } */}
-            <MainLoader/>
+            }
+          
             
         </Container>
     );

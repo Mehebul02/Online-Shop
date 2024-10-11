@@ -13,15 +13,15 @@ import { navigation } from "@/constants/indexs";
 
 const Footer = () => {
   return (
-    <div className="bg-lightBg py-10 lg:py-20  pb-16  ">
+    <div className="bg-lightBg py-10 lg:py-20  pb-16  mt-20">
 
 <Container className="flex flex-col lg:flex-row justify-between gap-6 " >
-        <div className="flex flex-col items-start gap-y-5">
+        <div className="flex flex-col items-start gap-y-5 w-52">
           <Link href={"/"}>
             <Image src={logo} alt="logo" className="w-20" />
           </Link>
-          <p className="w-14">
-            Could you clarify what the short description is <br />  for? For example, is it for your online <br />  profile, portfolio, or a project description? <br />  This will help me tailor the description accordingly!
+          <p className="">
+            Could you clarify what the short description is   for? For example, is it for your online   profile, portfolio, or a project description? This will help me tailor the description accordingly!
           </p>
           {/* <SocialLink/> */}
           <SocialLinks iconStyle="bg-themeWhite text-black border-themeColor  inline-flex p-2 rounded-full hover:text-sky-600 hover:border-sky-300 duration-300 cursor-pointer"/>
