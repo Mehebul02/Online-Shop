@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Product } from "../../type";
 import Image from "next/image";
 import Sidebar from "./Sidebar";
+import ProductPrice from "./ProductPrice";
 
 const ProductCard = ({product}:{product:Product}) => {
+  
     return (
         <div className="border border-gray-400 hover:shadow-lg hover:shadow-black/30 duration-200 rounded-md overflow-hidden group relative">
             {/* images  */}
@@ -14,8 +16,11 @@ const ProductCard = ({product}:{product:Product}) => {
            
             {/* description  */}
             <div className="border-t border-gray-200  py-2 px-4 flex flex-col justify-between h-40 font-jost">
+            <div>
             <p className="text-md capitalize text-gray-600">{product?.category}</p>
             <h2 className="text-md font-semibold">{product?.title}</h2>
+            <ProductPrice product={product}/>
+            </div>
             </div>
         </div>
     );
