@@ -2,14 +2,20 @@
 'use client'
 import Container from "@/shared/Container";
 import Image from "next/image";
+import ProductCard from "./ProductCard";
+import { Product } from "../../type";
 
-const ProductList = ({products}) => {
-    console.log(products)
+interface Props{
+    products:Product[];
+}
+
+const ProductList = ({products}:Props) => {
+  
     return (
         <Container>
             {
                 products?.map((item)=>(
-                    <Image src={item?.images[0]} alt='product' width={500} height={500}/>
+                    <ProductCard key={item?.id} product={item}/>
                 ))
             }
           
