@@ -12,13 +12,16 @@ interface Props{
 const ProductList = ({products}:Props) => {
   
     return (
-        <Container>
+        <Container className="py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+           
+
+        
             {
-                products?.map((item)=>(
+                products?.map((item:Product)=>(
                     <ProductCard key={item?.id} product={item}/>
                 ))
             }
-          
+            
         </Container>
     );
 };

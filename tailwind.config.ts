@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        logoColor:'#37A65A',
         themeColor: "#0C55AA",
         lightBg: "#f4f7f9",
         themeWhite: "#ffffff",
