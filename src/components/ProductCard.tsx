@@ -13,7 +13,7 @@ const ProductCard = ({product}:{product:Product}) => {
             <p className="absolute top-2 right-2 bg-logoColor text-white px-3 py-1 text-xs rounded-md">{product?.discountPercentage}$</p>
            
             {/* description  */}
-            <div className="p-4 font-jost">
+            <div className="border-t border-gray-200  py-2 px-4 flex flex-col justify-between h-40 font-jost">
             <p className="text-md capitalize text-gray-600">{product?.category}</p>
             <h2 className="text-md font-semibold">{product?.title}</h2>
             </div>
