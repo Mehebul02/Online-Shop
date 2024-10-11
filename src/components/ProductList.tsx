@@ -4,6 +4,7 @@ import Container from "@/shared/Container";
 import Image from "next/image";
 import ProductCard from "./ProductCard";
 import { Product } from "../../type";
+import MainLoader from "./MainLoader";
 
 interface Props{
     products:Product[];
@@ -16,11 +17,12 @@ const ProductList = ({products}:Props) => {
            
 
         
-            {
+            {/* {
                 products?.map((item:Product)=>(
                     <ProductCard key={item?.id} product={item}/>
                 ))
-            }
+            } */}
+            <MainLoader/>
             
         </Container>
     );
