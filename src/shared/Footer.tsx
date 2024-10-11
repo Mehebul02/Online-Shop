@@ -3,13 +3,13 @@ import Container from "./Container";
 import { logo } from "@/assets";
 
 import { FaFacebook } from "react-icons/fa";
-import { navigation } from "@/constants";
 import Link from "next/link";
 import { GoDotFill } from "react-icons/go";
 import { BsEnvelopeAt } from "react-icons/bs";
 import { GrLocation } from "react-icons/gr";
 import Title from "@/components/Title";
 import SocialLinks from "@/components/SocialLinks";
+import { navigation } from "@/constants/indexs";
 
 const Footer = () => {
   return (

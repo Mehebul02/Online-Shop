@@ -1,6 +1,5 @@
+import { navigation } from '@/constants/indexs';
 import Container from '@/shared/Container';
-import React from 'react';
-import {navigation} from '@/constants/index'
 import Link from 'next/link';
 const BottomHeader = () => {
     return (
@@ -8,7 +7,7 @@ const BottomHeader = () => {
             <Container className='flex justify-between items-center py-1'>
                 <div className='text-xs md:text-sm flex items-center gap-5 font-medium'>
                     {
-                        navigation?.map((item)=>(
+                        navigation?.map((item?:any)=>(
                             <Link href={item?.href} key={item?.title}>{item.title}</Link>
                         ))
                     }

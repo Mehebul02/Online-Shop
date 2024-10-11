@@ -1,4 +1,4 @@
-import { navigation } from '@/constants';
+
 import { Button, Dialog, DialogPanel } from '@headlessui/react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -7,6 +7,7 @@ import { RiMenu3Fill } from 'react-icons/ri';
 import SocialLinks from '../SocialLinks';
 import { logo } from '@/assets';
 import Image from 'next/image';
+import { navigation } from '@/constants/indexs';
 
 const MobileNavigation = () => {
     const [isOpen, setIsOpen] = useState(false);

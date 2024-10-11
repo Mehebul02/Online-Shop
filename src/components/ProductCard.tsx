@@ -8,7 +8,11 @@ const ProductCard = ({product}:{product:Product}) => {
             {/* images  */}
             <Link href={'/product'}> <Image  src={product.images[0]} alt="productImage" width={500} height={500} priority={true} className="w-full h-64 object-contain hover:scale-110 duration-300"></Image> </Link>
             <p className="absolute top-2 right-2 bg-logoColor text-white px-3 py-1 rounded-md">{product?.discountPercentage}$</p>
+           
             {/* description  */}
+            <div className="p-4">
+            <p className="text-md capitalize">{product?.category}</p>
+            </div>
         </div>
     );
 };
