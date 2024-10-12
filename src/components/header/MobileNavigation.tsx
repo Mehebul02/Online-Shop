@@ -59,7 +59,7 @@ const MobileNavigation = () => {
                             ))}
                         </div>
                         {/* social link  */}
-                        <SocialLinks/>
+                        <SocialLinks iconStyle='text-xl'/>
                     </DialogPanel>
                 </div>
             </Dialog>
