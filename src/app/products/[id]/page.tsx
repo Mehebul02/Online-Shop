@@ -21,6 +21,7 @@ const productSinglePage = async({ params }: Props) => {
            {/* product image  */}
            <ProductImages images={product?.images}/>
            {/* product details  */}
+           <h1>{product?.title}</h1>
            {/* product review */}
 
         </Container>
