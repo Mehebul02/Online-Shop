@@ -11,7 +11,7 @@ const ProductImages = ({ images }: Props) => {
         <div className="flex float-start">
             <div>
                 {images?.map((item, index) => (
-                    <Image key={index} src={item} alt="productImage" width={200} height={200} className={`w-24 h-24 object-contain cursor-pointer opacity-80 hover:opacity-100 border border-gray-200 duration-200 mb-1 p-1.5 ${currentImage ===item && 'border border-gray-500 opacity-100'}`} onClick={()=>setCurrentImage(item)
+                    <Image key={index} src={item} alt="productImage" width={200} height={200} className={`w-24 h-24 object-contain cursor-pointer opacity-80 hover:opacity-100 border border-gray-200 duration-200 mb-1 p-1.5 ${currentImage ===item && 'border border-gray-500 opacity-100 rounded-md'}`} onClick={()=>setCurrentImage(item)
 
                     }/>
                 ))}
