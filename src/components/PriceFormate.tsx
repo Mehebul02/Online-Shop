@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-interface Props {
+type Props ={
     amount: any;
     className: string
 
