@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 
 interface Props {
-    amount: number;
+    amount: any;
     className: string
 
 }
