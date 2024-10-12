@@ -8,7 +8,7 @@ const ProductPrice = ({product}:{product:Product}) => {
         <div className="flex items-center gap-2">
             
            <PriceFormate className="text-gray-500 line-through font-normal" amount={regularPrice}/>
-           <PriceFormate amount={discountPrice}/>
+           <PriceFormate className="font-semibold text-logoColor" amount={discountPrice}/>
         </div>
     );
 };

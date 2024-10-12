@@ -3,6 +3,7 @@ import { Product } from "../../type";
 import Image from "next/image";
 import Sidebar from "./Sidebar";
 import ProductPrice from "./ProductPrice";
+import AddToCartButton from "./AddToCartButton";
 
 const ProductCard = ({product}:{product:Product}) => {
   
@@ -21,6 +22,7 @@ const ProductCard = ({product}:{product:Product}) => {
             <h2 className="text-md font-semibold">{product?.title}</h2>
             <ProductPrice product={product}/>
             </div>
+            <AddToCartButton/>
             </div>
         </div>
     );
