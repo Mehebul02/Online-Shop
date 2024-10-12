@@ -1,9 +1,18 @@
-import React from 'react';
+import { getData } from "@/helpers";
 
-const productSinglePage = ({params}) => {
-    const {id}=params;
-    console.log('id', id);
-    
+interface Props {
+    params: {
+        id: string;
+    }
+
+}
+
+const productSinglePage = async({ params }: Props) => {
+    const { id } = params;
+    const endPoint = `https://dummyjson.com/products/${id}`
+    const product = await getData(endPoint)
+    console.log(product)
+
     return (
         <div>
             <h1>Single page</h1>
