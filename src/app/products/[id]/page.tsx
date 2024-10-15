@@ -4,6 +4,7 @@ import Container from "@/shared/Container";
 import { Product } from "../../../../type";
 import ProductPrice from "@/components/ProductPrice";
 import { MdStar } from "react-icons/md";
+import { FaRegEye } from "react-icons/fa";
 
 
 interface Props {
@@ -42,6 +43,7 @@ const productSinglePage = async({ params }: Props) => {
               <p>{`(${product?.rating?.toFixed(1)}) reviews`}</p>
            </div>
            </div>
+           <p className="flex items-center"><FaRegEye className="mr-1"/>250</p>
            </div>
            {/* product review */}
 
