@@ -35,7 +35,7 @@ const productSinglePage = async({ params }: Props) => {
                Array?.from({length:5})?.map((_,index)=>{
                 const filed = index+1 <= Math.floor(product.rating);
                 const halfFiled = index+1 > Math.floor(product?.rating) && index <Math.ceil(product?.rating)
-                return <MdStar key={index} className=""/>
+                return <MdStar key={index} className={`${filed ? 'text-[#fa8900]': halfFiled ?'text-[#f7ca00]': 'text-gray-600'}`}/>
                })
             }
               </div>
