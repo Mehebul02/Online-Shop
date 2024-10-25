@@ -60,11 +60,28 @@ const productSinglePage = async({ params }: Props) => {
            
           </div>
           <AddToCartButton product={product} className='rounded-md uppercase font-medium'/>
-          <Image src={paymentImage} alt="payment" className="w-auto object-cover mx-auto"/>
-          <p className="text-center text-md font-jost font-medium">Guaranteed safe & secure checkout</p>
+         <div className="bg-[#f7f7f7] p-5 rounded-md flex flex-col items-center justify-center gap-2">
+         <Image src={paymentImage} alt="payment" className="w-auto object-cover mx-auto"/>
+         <p className="text-center text-md font-jost font-medium">Guaranteed safe & secure checkout</p>
+         </div>
 
            </div>
            {/* product review */}
+           <div className="p-10 bg-[#f7f7f7] md:col-span-2 flex items-center gap-10">
+          {
+            product?.reviews?.map((item)=>(
+                <div key={item?.reviewerName} className="bg-white/80 p-5 border-[1px]  border-black-300 rounded-md hover:border-black-300 hover:bg-white duration-200 flex flex-col gap-2">
+
+                    <p className=" text-base font-semibold">{item?.comment}</p>
+                    <div>
+                        <p className=" text-base font-semibold">{item?.reviewerName}</p>
+                        <p>{item?.reviewerEmail}</p>
+                    </div>
+                </div>
+            ))
+          }
+
+           </div>
 
         </Container>
     );
