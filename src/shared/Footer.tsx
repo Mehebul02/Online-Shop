@@ -24,7 +24,7 @@ const Footer = () => {
             Could you clarify what the short description is   for? For example, is it for your online   profile, portfolio, or a project description? This will help me tailor the description accordingly!
           </p>
           {/* <SocialLink/> */}
-          <SocialLinks iconStyle="bg-themeWhite text-black border-themeColor  inline-flex p-2 rounded-full hover:text-sky-600 hover:border-sky-300 duration-300 cursor-pointer"/>
+          <SocialLinks className="bg-themeWhite text-black border-themeColor  inline-flex p-2 rounded-full hover:text-sky-600 hover:border-sky-300 duration-300 cursor-pointer"/>
         </div>
         <div>
           <Title>My Account</Title>
