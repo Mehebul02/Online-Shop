@@ -5,6 +5,7 @@ import { Product } from "../../../../type";
 import ProductPrice from "@/components/ProductPrice";
 import { MdStar } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
+import PriceFormat from "@/components/PriceFormate";
 
 
 interface Props {
@@ -43,7 +44,8 @@ const productSinglePage = async({ params }: Props) => {
               <p>{`(${product?.rating?.toFixed(1)}) reviews`}</p>
            </div>
            </div>
-           <p className="flex items-center"><FaRegEye className="mr-1"/>250</p>
+           <p className="flex items-center gap-2 font-jost"><FaRegEye className="mr-1"/> 250+ <span className="mr-2">peoples are viewing this right now</span> </p>
+          <p className="flex items-center gap-2 font-jost"> You are saving <PriceFormat amount={product?.discountPercentage / 100}  className="text-base font-semibold text-green-500"/> upon purchase</p>   
            </div>
            {/* product review */}
 
