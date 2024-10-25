@@ -49,6 +49,8 @@ const productSinglePage = async({ params }: Props) => {
           <div className="">
             <p className="text-sm tracking-wider font-jost">{product?.description}</p>
             <p className="text-base mt-3">{product?.warrantyInformation}</p>
+            <p>Brand: <span className="font-medium">{product?.brand}</span></p>
+            <p>Category: <span className="font-medium capitalize">{product?.category}</span></p>
           </div>
 
 
