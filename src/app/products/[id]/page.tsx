@@ -46,6 +46,12 @@ const productSinglePage = async({ params }: Props) => {
            </div>
            <p className="flex items-center gap-2 font-jost"><FaRegEye className="mr-1"/> 250+ <span className="mr-2">peoples are viewing this right now</span> </p>
           <p className="flex items-center gap-2 font-jost"> You are saving <PriceFormat amount={product?.discountPercentage / 100}  className="text-base font-semibold text-green-500"/> upon purchase</p>   
+          <div className="">
+            <p className="text-sm tracking-wider font-jost">{product?.description}</p>
+            <p className="text-base mt-3">{product?.warrantyInformation}</p>
+          </div>
+
+
            </div>
            {/* product review */}
 
