@@ -6,6 +6,7 @@ import ProductPrice from "@/components/ProductPrice";
 import { MdStar } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
 import PriceFormat from "@/components/PriceFormate";
+import AddToCartButton from "@/components/AddToCartButton";
 
 
 interface Props {
@@ -46,13 +47,17 @@ const productSinglePage = async({ params }: Props) => {
            </div>
            <p className="flex items-center gap-2 font-jost"><FaRegEye className="mr-1"/> 250+ <span className="mr-2">peoples are viewing this right now</span> </p>
           <p className="flex items-center gap-2 font-jost"> You are saving <PriceFormat amount={product?.discountPercentage / 100}  className="text-base font-semibold text-green-500"/> upon purchase</p>   
-          <div className="">
+          <div className="space-y-2">
             <p className="text-sm tracking-wider font-jost">{product?.description}</p>
             <p className="text-base mt-3">{product?.warrantyInformation}</p>
-            <p>Brand: <span className="font-medium">{product?.brand}</span></p>
+            <p>Brand: <span className="font-medium capitalize">{product?.brand}</span></p>
             <p>Category: <span className="font-medium capitalize">{product?.category}</span></p>
+            <p>Tags: {product?.tags?.map((item,index)=>(
+                <span className="gap-2 font-semibold capitalize" key={index}> {item} {index < product?.tags?.length -1 && ' , '}</span>
+            ))}</p>
+           
           </div>
-
+          <AddToCartButton product={product}/>
 
            </div>
            {/* product review */}
