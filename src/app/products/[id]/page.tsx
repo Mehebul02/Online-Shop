@@ -7,6 +7,8 @@ import { MdStar } from "react-icons/md";
 import { FaRegEye } from "react-icons/fa";
 import PriceFormat from "@/components/PriceFormate";
 import AddToCartButton from "@/components/AddToCartButton";
+import Image from "next/image";
+import { paymentImage } from "@/assets";
 
 
 interface Props {
@@ -57,7 +59,9 @@ const productSinglePage = async({ params }: Props) => {
             ))}</p>
            
           </div>
-          <AddToCartButton product={product}/>
+          <AddToCartButton product={product} className='rounded-md uppercase font-medium'/>
+          <Image src={paymentImage} alt="payment" className="w-auto object-cover mx-auto"/>
+          <p className="text-center text-md font-jost font-medium">Guaranteed safe & secure checkout</p>
 
            </div>
            {/* product review */}
