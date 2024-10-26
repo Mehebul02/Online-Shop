@@ -20,7 +20,7 @@ const HeaderIcons = () => {
                     </span>
                     </Link>
 
-                    <Link href='/shoppingBag' className='text-2xl relative'>
+                    <Link href='/cart' className='text-2xl relative'>
                     <BiShoppingBag />
                     <span className='iconDesign'>
                         {cart?.length > 0? cart?.length : '0'}

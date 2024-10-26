@@ -5,6 +5,7 @@ import { twMerge } from 'tailwind-merge';
 import { Product } from '../../type';
 import { useDispatch } from 'react-redux';
 import { adToCart } from '@/redux/onlineShopSlice';
+import toast from 'react-hot-toast';
 
 const AddToCartButton = ({ product, className }: { product: Product, className?: string }) => {
     const dispatch = useDispatch()
@@ -12,6 +13,7 @@ const AddToCartButton = ({ product, className }: { product: Product, className?:
     const handleAdToCart = () => {
         if (product) {
             dispatch(adToCart(product))
+            toast.success(`${product?.title.substring(0,10)}....added successfully!`)
         }
     }
 
