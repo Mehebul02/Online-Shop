@@ -9,12 +9,13 @@ import { MdFavoriteBorder, MdOutlineFavoriteBorder } from 'react-icons/md';
 import { BiShoppingBag } from 'react-icons/bi';
 import MobileNavigation from './MobileNavigation';
 import Link from 'next/link';
+import HeaderIcons from './HeaderIcons';
 const MiddleHeader = () => {
     const [searchValue, setSearchValue] = useState("");
     return (
         <div className='border-b-[1px] border-b-gray-400'>
             <Container className='py-5 flex justify-between items-center gap-4 md:gap-6 lg:gap-20'>
-              <Link href={'/'}>  <Image src={logo} alt="logo" className="w-20 opacity-98 hover:opacity-100" /></Link>
+                <Link href={'/'}>  <Image src={logo} alt="logo" className="w-20 opacity-98 hover:opacity-100" /></Link>
 
                 {/* Search ber  */}
                 <div className='hidden md:inline-flex flex-1 h-10 relative'>
@@ -47,20 +48,13 @@ const MiddleHeader = () => {
                             <p className='text-sm'>Login / Register</p>
                         </div>
                     </div>
-                    {/* Favorite Icon */}
-                    <div className='text-2xl relative'>
-                    <MdOutlineFavoriteBorder />
-                    <span className='iconDesign'>0</span>
-                    </div>
-                    {/* Favorite Icon */}
-                    <div className='text-2xl relative'>
-                    <BiShoppingBag />
-                    <span className='iconDesign'>0</span>
-                    </div>
+                    {/* header Icon */}
+
+                    <HeaderIcons />
 
                 </div>
                 {/* Mobile navigation  */}
-                <MobileNavigation/>
+                <MobileNavigation />
             </Container>
         </div>
     );

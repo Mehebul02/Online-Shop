@@ -20,8 +20,13 @@ export const onlineShopSlice = createSlice({
     initialState,
     reducers: {
         adToCart: (state, action) => {
-            const existingProduct = state?.cart.find((item) => item?.id === action.playload?.id)
-            // state.cart.push(action.payload)
+            const existingProduct = state?.cart.find((item) => item?.id === action.payload?.id)
+            
+            if (existingProduct) {
+                existingProduct.quantity! += 1
+            }else{
+                state.cart.push({...action.payload,quantity:1})
+            }
 
         }
     }

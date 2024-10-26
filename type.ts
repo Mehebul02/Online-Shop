@@ -21,6 +21,7 @@ export interface Product {
     meta: Meta;
     images: string[];
     thumbnail: string;
+    quantity?:number
   }
   
   export interface Dimensions {
@@ -44,3 +45,10 @@ export interface Product {
     qrCode: string;
   }
   
+  export interface StateType{
+    onlineShop:{
+      cart:Product[];
+      favorite:Product[];
+      userInfo:any
+    }
+  }
