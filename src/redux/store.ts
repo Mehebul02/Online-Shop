@@ -1,6 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-
+import onlineShopRuducer from './onlineShopSlice'
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    onlineShop:onlineShopRuducer
+  },
 })
 
