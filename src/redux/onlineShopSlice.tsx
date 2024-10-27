@@ -28,7 +28,19 @@ export const onlineShopSlice = createSlice({
                 state.cart.push({...action.payload,quantity:1})
             }
 
-        }
+        },
+        increaseQuantity:(state,action)=>{
+            const existingProduct = state?.cart.find((item) => item?.id === action.payload)
+            if(existingProduct){
+                existingProduct.quantity! +=1
+            }
+        },
+        DecreaseQuantity:(state,action)=>{
+            const existingProduct = state?.cart.find((item) => item?.id === action.payload)
+            if(existingProduct){
+                existingProduct.quantity! -=1
+            }
+        },
     }
 })
 
