@@ -35,7 +35,7 @@ export const onlineShopSlice = createSlice({
                 existingProduct.quantity! +=1
             }
         },
-        DecreaseQuantity:(state,action)=>{
+        decreaseQuantity:(state,action)=>{
             const existingProduct = state?.cart.find((item) => item?.id === action.payload)
             if(existingProduct){
                 existingProduct.quantity! -=1
@@ -44,6 +44,6 @@ export const onlineShopSlice = createSlice({
     }
 })
 
-export const { adToCart } = onlineShopSlice.actions
+export const { adToCart , increaseQuantity, decreaseQuantity} = onlineShopSlice.actions
 
 export default onlineShopSlice.reducer

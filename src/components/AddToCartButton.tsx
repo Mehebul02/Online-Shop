@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Product, StateType } from '../../type';
 import { useDispatch, useSelector } from 'react-redux';
-import { adToCart } from '@/redux/onlineShopSlice';
+import { adToCart, decreaseQuantity, increaseQuantity } from '@/redux/onlineShopSlice';
 import toast from 'react-hot-toast';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 
@@ -33,14 +33,19 @@ const AddToCartButton = ({ product, className }: { product: Product, className?:
         <>
         {
             existingProduct? <div className='flex self-start items-center  justify-center gap-2 py-2 mb-2'>
-            <button className='bg-[#f7f7f7] text-black p-2 border-[1px] border-gray-200 hover:border-sky-200 rounded-full
+            <button 
+            onClick={()=> {dispatch(decreaseQuantity(product?.id)), toast.success('Quantity decrease successfully')}}
+            disabled={existingProduct?.quantity! <=1}
+            className='bg-[#f7f7f7] text-black p-2 border-[1px] border-gray-200 hover:border-sky-200 rounded-full
         text-sm hover:bg-white duration-200 cursor-pointer disabled:text-gray-300 disabled:hover:bg-[#f7f7f7]'>
                 <FaMinus />
             </button >
             <p className='text-base font-semibold w-10 text-center'>
-                {existingProduct?qua}
+                {existingProduct?.quantity}
             </p>
-            <button className='bg-[#f7f7f7] text-black p-2 border-[1px] border-gray-200 hover:border-sky-200 rounded-full
+            <button 
+            onClick={()=>{dispatch(increaseQuantity(product?.id)),toast.success('Quantity increase successfully')}}
+            className='bg-[#f7f7f7] text-black p-2 border-[1px] border-gray-200 hover:border-sky-200 rounded-full
         text-sm hover:bg-white duration-200 cursor-pointer disabled:text-gray-300 disabled:hover:bg-[#f7f7f7]'>
 
                 <FaPlus />
