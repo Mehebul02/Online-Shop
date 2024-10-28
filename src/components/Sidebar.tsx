@@ -12,17 +12,21 @@ import toast from "react-hot-toast";
 
 
 const Sidebar = ({product}:{product:Product}) => {
-
+ 
     const { favorite } = useSelector((state: StateType) => state?.onlineShop);
     const [existingProduct, SetExistingProduct] = useState<Product | null>(null);
+    const dispatch =useDispatch()
     useEffect(()=>{
         const availableProduct = favorite?.find((item)=>item?.id === product?.id)
+        console.log('avil,', availableProduct)
         if(availableProduct){
             SetExistingProduct(availableProduct)
+        }else{
+            SetExistingProduct(null)
         }
-    },[favorite , product])
+    },[favorite , product,dispatch,existingProduct])
 
-    const dispatch =useDispatch()
+   
     const handleFavorite=()=>{
         dispatch(addToFavorite(product))
         if(existingProduct){
